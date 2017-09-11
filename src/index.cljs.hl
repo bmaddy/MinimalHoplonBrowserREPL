@@ -1,7 +1,9 @@
-(page "index.html")
+(page "index.html"
+  (:require [data.state :as st]))
 
 (html
   (head
     (link :href "app.css" :rel "stylesheet" :type "text/css"))
   (body
-    (h1 "Hello, Hoplon!")))
+    (h1 "Hello, Hoplon!")
+    (h2 (text "Contents from a cell: ~{st/important-message}"))))
